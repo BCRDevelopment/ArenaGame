@@ -10,6 +10,7 @@ namespace ArenaGame
     {
         static void Main(string[] args)
         {
+            MainGame.Game();
         }
     }
 }
