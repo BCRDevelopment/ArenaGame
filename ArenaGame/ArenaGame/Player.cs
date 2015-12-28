@@ -16,27 +16,31 @@ namespace ArenaGame
         static int intInitiative;
 
         //Public Properties
-        public string playerName
+        public string playerNameStr
         { get { return strPlayerName; } set { } }
 
-        public int playerDifficulty
+        public int playerDifficultyInt
         { get { return intDifficulty; } set { } }
 
-        public int playerHealth
+        public int playerHealthInt
         { get { return intPlayerHealth; } set { } }
 
-        public int weaponDecider
+        public int weaponDeciderInt
         { get {return intWeaponDecider;} set { } }
 
-        public int playerInitiative
+        public int playerInitiativeInt
         {  get { return intInitiative; } set { } }
 
+        //child objects
+        Weapon playerWeapon = new Weapon();
+
         //Function to gather player information from user
-        public string CharacterCreation()
+        public void CharacterCreation()
         {
             GetPlayerName();
             SetDifficulty();
-            GetPlayerHealth(playerDifficulty);
+            GetPlayerHealth(playerDifficultyInt);
+            
         }
 
         static string GetPlayerName()
@@ -57,6 +61,11 @@ namespace ArenaGame
             do
             {
                 getInput = false;
+                Console.WriteLine("Choose your difficulty level:");
+                Console.WriteLine("(E)asy");
+                Console.WriteLine("(N)ormal");
+                Console.WriteLine("(H)ard");
+                Console.WriteLine("(S)uperhuman");
                 charDiff = MainGame.GetUserInputChar();
                 switch (charDiff)
                 {

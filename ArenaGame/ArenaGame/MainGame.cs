@@ -23,7 +23,7 @@ namespace ArenaGame
 
             //Character Creation
             Player player = new Player();
-            player = player.CharacterCreation();
+            player.CharacterCreation();
         }
 
         public static char GetUserInputChar()
