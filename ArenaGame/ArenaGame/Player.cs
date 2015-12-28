@@ -14,6 +14,7 @@ namespace ArenaGame
         static int intPlayerHealth;
         static int intWeaponDecider;
         static int intInitiative;
+        static bool isPlayer = true;
 
         //Public Properties
         public string playerNameStr
@@ -31,6 +32,9 @@ namespace ArenaGame
         public int playerInitiativeInt
         {  get { return intInitiative; } set { } }
 
+        public bool isPlayerBool
+        { get { return isPlayer; } set { } }
+
         //child objects
         Weapon playerWeapon = new Weapon();
 
@@ -40,7 +44,7 @@ namespace ArenaGame
             GetPlayerName();
             SetDifficulty();
             GetPlayerHealth(playerDifficultyInt);
-            
+            playerWeapon.WeaponDefinition(playerDifficultyInt, isPlayer);
         }
 
         static string GetPlayerName()

@@ -13,13 +13,10 @@ namespace ArenaGame
         {
             //Global variables
             //Player
-            string strPlayerName;
-            int intPlayerHealth;
-            int intDifficultyLevel;
+            //None at this time
 
             //Opponent
-            string strOpponentName;
-            int intOpponentHealth;
+            //None at this time
 
             //Character Creation
             Player player = new Player();
@@ -87,6 +84,11 @@ namespace ArenaGame
                     break;
             }
             return damage;
+        }
+
+        public static void Combat()
+        {
+
         }
     }
 }

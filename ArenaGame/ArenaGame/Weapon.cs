@@ -112,5 +112,12 @@ namespace ArenaGame
             if (getBonus > 15)
                 intWeaponBonus = MainGame.WeaponDieRoller(4, 1, 0);
         }
+
+        public void WeaponDefinition(int diff, bool isPlayer)
+        {
+            CheckforWeaponType(diff, isPlayer);
+            AssignWeaponType(weaponDeciderInt);
+            AssignWeaponBonus();
+        }
     }
 }
